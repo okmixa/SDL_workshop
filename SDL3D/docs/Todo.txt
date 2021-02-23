@@ -1,0 +1,60 @@
+-Fix uninitialized read in misc/FunctionVisualizer/resources/mainBUGGED.lua
+-Add to Utils(?) a function to convert from pixels to meters for Lua
+-Fix weird crash on Windows that happens on a certain build a few seconds after you quit. I think it is the same bug as below (game stays alive for a while after quitting) and I think it is due to the fact I am forgetting to quit cleanly a certain .dll.
+
+-To make it faster, use delta instead of multiple steps per frame?
+
+-Definitely try to make it faster CPU wise. Also, when there are a lot of verticies, it slows down A LOT CPU side!
+
+-In PhysicsBody when generating model matrix, make the Box2D angle the actual angle instead of relative to the current rotation of the other axes?
+
+- Lua timer!
+
+- Have a renderAllDebugShapesWithCoords() to relieve the work load from Lua (and usless redraws!)
+-Sometimes stays alive for a few seconds (like 10) after quitting?
+-In PhysicsBody, render debug shapes at the center of the objects themselves instead of relative to object geometry?
+
+-Ability to create camera with/without physics?
+-Give lua access to gravity and have projection instead of hardcoded coords for 2D physics?
+
+-Write a template container and keep those instances instead of a bunch of maps in ResourceManager. Add the ability to duplicate resources in this container!
+
+-Make physics faster by having less steps per frame.
+
+-USE UNIFORM BLOCK FOR LIGHTS?
+-Give lightSSSS to shader + don't care about lights that are too far away
+- CHECK FOR ONSTATE BEFORE SENDING!
+->>> Maybe give mLights to ShadedObject? Shared pointer? Reference?
+->>>>>> Uniform block thing: http://www.geeks3d.com/20140704/gpu-buffers-introduction-to-opengl-3-1-uniform-buffers-objects/
+->>>>> http://stackoverflow.com/questions/7954927/glsl-passing-a-list-of-values-to-fragment-shader
+
+-Don't make uniforms obligatory
+-Work on CMake lists to make adding libraries easier and other things.
+-Render to texture, so we can have some awesome effects!
+-When a C++ error happens (that is caught), crash() it with the Lua line (when it is called from Lua)!
+-Give Lua access to input events?
+
+- Use .mtl material files (with ObjectGeometry, check out addObjectGeometryGroup())
+->>> .mtl can specify textures!
+
+-A Window class instead of functions in Game? It's fine for now, maybe an SDL window is enough.
+-Load all files at the same place?
+
+-Settings class? Include max fps, field of view and resolution
+--->> Can the field of view be anything else than numbers power of ten?
+
+
+-3d animations: Going with mesh keyframes fro now: blender! Export in one .obj per animation. Then interpolate the meshes.
+------------------------------------
+-Do something with v-sync like that the frame rate doesn't drop to 30?
+
+-Support events for input
+
+------------------------------------
+
+-Advanced tutorials:
+-2D Text (+2d textures)
+
+- Transparency
+
+-Dynamic shadows (static shadows are made in 3d modeling program)

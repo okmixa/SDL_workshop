@@ -1,0 +1,20 @@
+# Files ignored by git
+
+# Compiled Object files
+# A leading slash (/) will make sure we only ignore the files in the lib folder
+# present in the same directory as .gitignore.
+/lib/**/*.slo
+/lib/**/*.lo
+/lib/**/*.o
+/lib/**/*.a
+/lib/**/*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Linux hidden temporary files (files ending with a tilde (~))
+*~
+
+/build/
